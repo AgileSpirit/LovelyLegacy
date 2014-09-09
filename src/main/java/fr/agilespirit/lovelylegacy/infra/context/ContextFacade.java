@@ -1,4 +1,6 @@
-package fr.agilespirit.lovelylegacy.infra;
+package fr.agilespirit.lovelylegacy.infra.context;
+
+import fr.agilespirit.lovelylegacy.infra.EnvironmentManager;
 
 /**
  * User:    Jérémy Buget

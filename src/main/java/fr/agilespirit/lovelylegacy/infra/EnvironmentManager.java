@@ -2,6 +2,7 @@ package fr.agilespirit.lovelylegacy.infra;
 
 import fr.agilespirit.lovelylegacy.domain.Environment;
 import fr.agilespirit.lovelylegacy.domain.EnvironmentType;
+import fr.agilespirit.lovelylegacy.infra.context.SpringBean;
 
 /**
  * User:    Jérémy Buget

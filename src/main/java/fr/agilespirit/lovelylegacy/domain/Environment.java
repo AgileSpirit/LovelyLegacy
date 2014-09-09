@@ -9,7 +9,7 @@ package fr.agilespirit.lovelylegacy.domain;
  */
 public class Environment {
 
-    private final EnvironmentType type;
+    private EnvironmentType type;
 
     public Environment(EnvironmentType type) {
         this.type = type;

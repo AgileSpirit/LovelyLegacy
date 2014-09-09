@@ -1,6 +1,8 @@
 package fr.agilespirit.lovelylegacy.application;
 
-import fr.agilespirit.lovelylegacy.infra.ContextFacade;
+import fr.agilespirit.lovelylegacy.infra.context.ContextFacade;
+import fr.agilespirit.lovelylegacy.infra.security.AuthorizationHeader;
+import fr.agilespirit.lovelylegacy.infra.security.ResourceException;
 
 /**
  * User:    Jérémy Buget
@@ -9,11 +11,13 @@ import fr.agilespirit.lovelylegacy.infra.ContextFacade;
  * GitHub:  https://github.com/AgileSpirit/
  * Date:    09/09/2014
  */
-public class EnvironmentResource {
+public class EnvironmentResource extends AbstractResource {
 
     private ContextFacade contextFacade = ContextFacade.getInstance();
 
-    public String getSystemBaseUrl() {
+    public String getSystemBaseUrl(AuthorizationHeader authorizationHeader) throws ResourceException {
+        checkSecurity(authorizationHeader);
+
         switch (contextFacade.getEnvironmentManager().retrieveEnvironmentType()) {
             case DEVELOPMENT:
                 return "http://localhost:8080/";
@@ -27,6 +31,14 @@ public class EnvironmentResource {
             default:
                 return "http://my-app.com";
         }
+    }
+
+    public void otherMethod(AuthorizationHeader authorizationHeader) throws ResourceException {
+        checkSecurity(authorizationHeader);
+    }
+
+    public void yetAnotherMethod(AuthorizationHeader authorizationHeader) throws ResourceException {
+        checkSecurity(authorizationHeader);
     }
 
 }

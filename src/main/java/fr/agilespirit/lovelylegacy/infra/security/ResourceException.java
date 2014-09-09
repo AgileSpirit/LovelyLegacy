@@ -1,4 +1,4 @@
-package fr.agilespirit.lovelylegacy.infra;
+package fr.agilespirit.lovelylegacy.infra.security;
 
 /**
  * User:    Jérémy Buget
@@ -7,6 +7,5 @@ package fr.agilespirit.lovelylegacy.infra;
  * GitHub:  https://github.com/AgileSpirit/
  * Date:    09/09/2014
  */
-public abstract class SpringBean {
-
+public class ResourceException extends Exception {
 }

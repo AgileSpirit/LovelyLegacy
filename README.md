@@ -1,3 +1,5 @@
+LovelyLegacy est un kata
+
 ## Contexte
 
 L'application se base sur Spring pour gérer son contexte.
@@ -9,3 +11,8 @@ Evidemment, la façade est un Singleton, instanciée au niveau de la classe Serv
 ## Exercice
 
 Il s'agit de tester le Service en modifiant le moins de code initial possible.
+
+
+## Contraintes
+
+EnvironmentResource#getSystemBaseUrl

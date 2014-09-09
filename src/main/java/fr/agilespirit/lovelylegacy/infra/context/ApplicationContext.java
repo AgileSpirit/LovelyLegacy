@@ -1,4 +1,6 @@
-package fr.agilespirit.lovelylegacy.infra;
+package fr.agilespirit.lovelylegacy.infra.context;
+
+import fr.agilespirit.lovelylegacy.infra.EnvironmentManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,11 +18,14 @@ public class ApplicationContext {
 
     public ApplicationContext() {
         managedBeans = new HashMap<>();
-        managedBeans.put("environmentManager", new EnvironmentManager());
+        setBean("environmentManager", new EnvironmentManager());
     }
 
     public <T extends SpringBean> T getBean(String beanName, Class<T> clazz) {
         return (T) managedBeans.get(beanName);
     }
 
+    public <T extends SpringBean> void setBean(String beanName, T springBean) {
+        managedBeans.put(beanName, springBean);
+    }
 }
