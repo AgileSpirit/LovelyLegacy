@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class ApplicationContext {
 
-    Map<String, SpringBean> managedBeans;
+    private final Map<String, SpringBean> managedBeans;
 
     public ApplicationContext() {
         managedBeans = new HashMap<>();

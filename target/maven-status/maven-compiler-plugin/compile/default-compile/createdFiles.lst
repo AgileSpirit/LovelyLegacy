@@ -1,0 +1,9 @@
+fr/agilespirit/lovelylegacy/domain/Environment.class
+fr/agilespirit/lovelylegacy/Main.class
+fr/agilespirit/lovelylegacy/infra/EnvironmentManager.class
+fr/agilespirit/lovelylegacy/application/EnvironmentResource.class
+fr/agilespirit/lovelylegacy/infra/ContextFacade.class
+fr/agilespirit/lovelylegacy/infra/ApplicationContext.class
+fr/agilespirit/lovelylegacy/infra/SpringBean.class
+fr/agilespirit/lovelylegacy/domain/EnvironmentType.class
+fr/agilespirit/lovelylegacy/application/EnvironmentResource$1.class
