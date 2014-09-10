@@ -11,7 +11,7 @@ import fr.agilespirit.lovelylegacy.infra.security.ResourceException;
  * GitHub:  https://github.com/AgileSpirit/
  * Date:    09/09/2014
  */
-public class EnvironmentResource extends AbstractResource {
+public class EnvironmentService extends AbstractService {
 
     private ContextFacade contextFacade = ContextFacade.getInstance();
 
@@ -35,10 +35,12 @@ public class EnvironmentResource extends AbstractResource {
 
     public void otherMethod(AuthorizationHeader authorizationHeader) throws ResourceException {
         checkSecurity(authorizationHeader);
+        // Do some orchestration treatments
     }
 
     public void yetAnotherMethod(AuthorizationHeader authorizationHeader) throws ResourceException {
         checkSecurity(authorizationHeader);
+        // Do some orchestration treatments
     }
 
 }

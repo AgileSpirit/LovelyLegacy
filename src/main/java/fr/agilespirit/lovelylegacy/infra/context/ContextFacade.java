@@ -1,6 +1,6 @@
 package fr.agilespirit.lovelylegacy.infra.context;
 
-import fr.agilespirit.lovelylegacy.infra.EnvironmentManager;
+import fr.agilespirit.lovelylegacy.infra.repository.EnvironmentRepository;
 
 /**
  * User:    Jérémy Buget
@@ -28,8 +28,8 @@ public class ContextFacade {
         }
     }
 
-    public EnvironmentManager getEnvironmentManager() {
-        return context.getBean("environmentManager", EnvironmentManager.class);
+    public EnvironmentRepository getEnvironmentManager() {
+        return context.getBean("environmentManager", EnvironmentRepository.class);
     }
 
 }

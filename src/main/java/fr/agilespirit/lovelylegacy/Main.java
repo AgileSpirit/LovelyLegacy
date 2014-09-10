@@ -1,6 +1,6 @@
 package fr.agilespirit.lovelylegacy;
 
-import fr.agilespirit.lovelylegacy.application.EnvironmentResource;
+import fr.agilespirit.lovelylegacy.application.EnvironmentService;
 import fr.agilespirit.lovelylegacy.infra.security.AuthorizationHeader;
 import fr.agilespirit.lovelylegacy.infra.security.ResourceException;
 import org.slf4j.Logger;
@@ -21,7 +21,7 @@ public class Main {
 
     public static void main(String[] args) throws ResourceException {
         AuthorizationHeader authorizationHeader = new AuthorizationHeader(UUID.randomUUID().toString());
-        EnvironmentResource environmentResource = new EnvironmentResource();
+        EnvironmentService environmentResource = new EnvironmentService();
         LOGGER.info("System base URL: " + environmentResource.getSystemBaseUrl(authorizationHeader));
     }
 

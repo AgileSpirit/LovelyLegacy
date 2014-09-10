@@ -10,7 +10,7 @@ import fr.agilespirit.lovelylegacy.infra.security.ResourceException;
  * GitHub:  https://github.com/AgileSpirit/
  * Date:    09/09/2014
  */
-public abstract class AbstractResource {
+public abstract class AbstractService {
 
     void checkSecurity(AuthorizationHeader authorizationHeader) throws ResourceException {
         if (authorizationHeader == null || authorizationHeader.getAccessToken() == null) {
